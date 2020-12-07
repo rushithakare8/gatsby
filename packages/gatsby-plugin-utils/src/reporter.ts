@@ -7,7 +7,7 @@ export const reporter = {
   success: (message: string): void =>
     console.log(c.green(c.symbols.check + ` `) + message),
   error: (message: any): void =>
-    console.error(c.red(c.symbols.cross + ` `) + message),
+    console.error(c.red(c.symbols.cross + ` `), message),
   panic: (message: any): never => {
     console.error(message)
     process.exit(1)
